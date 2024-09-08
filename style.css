@@ -1,0 +1,785 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* line-height: 1.6; */
+    color: #333;
+    background-color: #f8f8f8;
+    /* font-family: 'Google Sans Text'; */
+    font-style: normal;
+    /* font-weight: 400; */
+    src: url(https://fonts.gstatic.com/l/font?kit=5aUu9-KzpRiLCAt4Unrc-xIKmCU5mEhkgo3FI_E8lH570oBdIw&skey=b20c8ebc9802c116&v=v22) format('woff2');
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgb(42, 39, 45);
+    background: linear-gradient(95deg, rgba(42, 39, 45, 1) 0%, rgba(69, 71, 77, 1) 100%);
+    /* background-color: #fff; */
+    color: #fff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+
+    display: flex;
+    gap: 20px;
+    /* Adds spacing between links */
+}
+
+.navbar .nav-links li {
+    margin: 0;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    /* color: #333; */
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    gap: 10px;
+    /* Adds space between the image and text */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    /* Center items vertically inside the anchor tag */
+    text-decoration: none;
+    /* Removes underline from the anchor text */
+}
+
+.logo img {
+    height: 50px;
+    /* Keeps the image height as you specified */
+    margin-right: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+    /* Ensures the image scales properly */
+}
+
+.logo h1 {
+    color: #fff;
+    /* color: #333; */
+    font-size: 1.9rem;
+    /* Adjust font size as needed */
+    margin: 0;
+    /* Removes default margin around the heading */
+    font-weight: bold;
+    /* Adjust font weight if needed */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+/* Responsive adjustments for tablet */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+        /* Adjust padding */
+        flex-direction: column;
+        /* Stack logo and links vertically */
+    }
+
+    .logo {
+        gap: 5px;
+        /* Reduce gap between elements on smaller screens */
+    }
+
+    .logo img {
+        height: 40px;
+        margin-right: 10px;
+        /* Reduce the size of the logo on smaller screens */
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+        /* Reduce the font size for better fit */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        /* Keep nav links side by side */
+        margin-top: 20px;
+        gap: 10px;
+
+        /* Adjust gap as needed */
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+        /* Further reduce padding for smaller screens */
+        flex-direction: column;
+        /* Stack the logo and nav vertically */
+    }
+
+    .logo {
+        flex-direction: column;
+        /* Stack the logo and text vertically on very small screens */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .logo a {
+        gap: 5px;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+        /* Further reduce the font size */
+    }
+
+    .nav-links {
+        flex-direction: row;
+        /* Keep nav links side by side */
+        gap: 10px;
+        /* Adjust gap between links for better spacing */
+        margin-top: 10px;
+        /* Add spacing above the links */
+        align-items: center;
+        /* Center the links vertically */
+    }
+
+    .navbar .nav-links a {
+        color: #fff;
+        /* color: #333; */
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://cdn.glitch.global/f7861d21-347d-491f-8406-2ef4a3820534/home.jpg?v=1724905572930') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: left;
+    color: #f8f8f8;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the overlay color and opacity */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-left: 80px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #357ab8;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .call-button {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .hero-content {
+        margin-left: 10px;
+    }
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #1a1a1a;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.text-section {
+    position: relative;
+    display: flex;
+    background-color: rgb(7, 4, 29);
+    align-items: center;
+    text-align: left;
+    color: #f8f8f8;
+    padding: 100px;
+}
+
+.text-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.7rem;
+}
+
+/* Responsive Styles */
+
+
+@media (max-width: 480px) {
+
+
+    .text-section p {
+        font-size: 1rem;
+    }
+
+    .text-section {
+        padding: 40px 20px;
+    }
+}
+
+
+
+.services-container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    color: #f8f8f8;
+    background-color: #1a1a4d;
+}
+
+.services-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #2d2d73;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 1rem;
+}
+
+
+.text-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 94, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
+    gap: 20px;
+    color: #f8f8f8;
+    max-width: 100%;
+    /* Ensure it doesn't overflow */
+}
+
+.image-text-section {
+    padding: 80px;
+}
+
+.image-text-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.image-text-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    background-color: #4d73ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #365bbf;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    max-width: 100%;
+    /* Prevents image from overflowing */
+    /* Optional: Add some styling to the image */
+}
+
+@media (max-width: 768px) {
+    .text-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-text-section {
+        padding: 40px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .image-section img {
+        width: 100%;
+        /* Ensures image stays responsive */
+        max-height: 300px;
+        /* Optional: Limit height to prevent image from being too large on smaller screens */
+        object-fit: contain;
+        /* Adjusts the fit based on your layout preference */
+    }
+}
+
+.testimonial-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.testimonial-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+}
+
+.testimonial-text {
+    flex: 1;
+    padding: 0 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.arrows {
+    cursor: pointer;
+    font-size: 2rem;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.arrows:hover {
+    color: #4d73ff;
+}
+
+.testimonial-indicators {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #666;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #4d73ff;
+}
+
+.about-section-main {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 81, 253, 1) 100%);
+}
+
+.about-section {
+    max-width: 800px;
+    padding: 80px 80px;
+    text-align: left;
+    color: #f8f8f8;
+    /* background-color: rgb(7, 4, 29); */
+}
+
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.about-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 20px;
+    color: #f8f8f8;
+    background-color: rgb(7, 4, 29);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+    .about-section {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    /* .about-section {
+        font-size: 1rem;
+        padding: 20px;
+    } */
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+
+}
+
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgb(7, 4, 29);
+    color: #f8f8f8;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact p a:hover {
+    text-decoration: underline;
+}
+
+.contact-options {
+    margin-bottom: 20px;
+}
+
+.whatsapp-link {
+    align-items: center;
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.revealUp {
+    opacity: 0;
+    visibility: hidden;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section {
+    padding: 20px;
+    background-color: #1a1a4d;
+}
+
+.contact-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 700px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    /* background-color: #f9f9f9; */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    color: #fff;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: xx-large
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+.registration-main {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Registration Info Section */
+.registration-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+    color: #fff;
+    text-align: center;
+    /* border-radius: 8px; */
+    /* margin: 20px; */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+.info-content {
+    max-width: 800px;
+}
+
+.info-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-content p {
+        font-size: 1rem;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    background-color: #29be60;
+    border-radius: 50px;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+/*     margin-right: 5px; */
+}
+
+.instagram-button {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    background-color: #ea3a3a;
+    border-radius: 50px;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.instagram-button img {
+    width: 30px;
+    height: 30px;
+    /* margin-right: 5px; */
+}
