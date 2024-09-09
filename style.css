@@ -157,7 +157,7 @@ body {
     }
 
     .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         /* Reduce the font size for better fit */
     }
 
@@ -202,11 +202,11 @@ body {
     }
 
     .logo a {
-        gap: 5px;
+        gap: 0px;
     }
 
     .logo h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         /* Further reduce the font size */
     }
 
