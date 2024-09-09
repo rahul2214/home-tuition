@@ -139,7 +139,7 @@ body {
 /* Responsive adjustments for tablet */
 @media (max-width: 768px) {
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 30px;
         /* Adjust padding */
         /* flex-direction: column; */
         /* Stack logo and links vertically */
@@ -188,7 +188,7 @@ body {
 /* Responsive adjustments for mobile */
 @media (max-width: 480px) {
     .navbar {
-        padding: 10px;
+        padding: 15px;
         /* Further reduce padding for smaller screens */
         /* flex-direction: column; */
         /* Stack the logo and nav vertically */
