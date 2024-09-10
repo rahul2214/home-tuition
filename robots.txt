@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Disallow: /cgi-bin/
+
+# Allow all public sections of the website
+Allow: /
+
+# Sitemap URL
+Sitemap: https://bharathometuitions.com/sitemap.xml
