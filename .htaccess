@@ -1,0 +1,17 @@
+# Force HTTPS Redirection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Redirect all HTTP requests to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Redirect index.html and index.php to the root URL
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Redirect requests for index.html or index.php to the root URL
+    RewriteCond %{THE_REQUEST} /index\.(html|php) [NC]
+    RewriteRule ^(.*)index\.(html|php)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+
