@@ -388,7 +388,7 @@ body {
     background-color: #1a1a4d;
 }
 
-.services-container h2 {
+.services-container h4 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
@@ -443,7 +443,7 @@ body {
     padding: 80px;
 }
 
-.image-text-section h2 {
+.image-text-section h3 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -715,7 +715,7 @@ footer {
     color: #fff;
 }
 
-.contact-form h2 {
+.contact-form h6 {
     margin-bottom: 15px;
     font-size: xx-large
 }
@@ -778,7 +778,7 @@ footer {
     max-width: 800px;
 }
 
-.info-content h2 {
+.info-content h5 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
