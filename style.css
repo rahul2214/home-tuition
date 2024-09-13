@@ -235,7 +235,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('images/bharathometuitionshome.jpg') no-repeat center center/cover;
+    background: url('https://cdn.glitch.global/f7861d21-347d-491f-8406-2ef4a3820534/home.jpg?v=1724905572930') no-repeat center center/cover;
     position: relative;
     display: flex;
     /* justify-content: center; */
@@ -369,7 +369,7 @@ body {
 
 
     .text-section p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .text-section {
