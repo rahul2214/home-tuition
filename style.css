@@ -349,10 +349,10 @@ body {
 .text-section {
     position: relative;
     display: flex;
-    background-color: rgb(7, 4, 29);
+    background-color: FFFFFF;
     align-items: center;
     text-align: left;
-    color: #f8f8f8;
+    color: #000000;
     padding: 100px;
 }
 
@@ -385,11 +385,12 @@ body {
     padding: 50px 20px;
     text-align: center;
     color: #f8f8f8;
-    background-color: #1a1a4d;
+    background-color: #FFFFFF;
 }
 
 .services-container h4 {
     font-size: 2.5rem;
+  color:#000000;
     margin-bottom: 40px;
 }
 
@@ -431,10 +432,11 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 94, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
+  background-color: #FFFFFF;
+/*     background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 94, 121, 1) 40%, rgba(0, 212, 255, 1) 100%); */
     gap: 20px;
-    color: #f8f8f8;
+    color: #000000;
     max-width: 100%;
     /* Ensure it doesn't overflow */
 }
@@ -508,7 +510,7 @@ body {
     max-width: 800px;
     padding: 20px;
     text-align: center;
-    color: #f8f8f8;
+    color: #000000;
 }
 
 .testimonial-title {
@@ -563,16 +565,16 @@ body {
 }
 
 .about-section-main {
-    background: rgb(34, 193, 195);
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 81, 253, 1) 100%);
+background-color:#FFFFFF;
+  /*     background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 81, 253, 1) 100%); */
 }
 
 .about-section {
     max-width: 800px;
     padding: 80px 80px;
     text-align: left;
-    color: #f8f8f8;
-    /* background-color: rgb(7, 4, 29); */
+color: #000000;    /* background-color: rgb(7, 4, 29); */
 }
 
 
@@ -588,25 +590,26 @@ body {
 }
 
 .about-section a {
-    color: #fff;
-    text-decoration: none;
+color: #000000;    text-decoration: none;
 }
 
 .cta-section {
     text-align: center;
     padding: 20px;
     color: #f8f8f8;
-    background-color: rgb(7, 4, 29);
+    background-color: #FFFFFF;
 }
 
 .cta-section h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+  color:#000000;
 }
 
 .cta-section p {
     font-size: 1rem;
     margin-bottom: 20px;
+  color:#000000;
 }
 
 
@@ -632,8 +635,8 @@ body {
 .contact {
     padding: 50px 20px;
     text-align: center;
-    background-color: rgb(7, 4, 29);
-    color: #f8f8f8;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 .contact h2 {
@@ -656,7 +659,7 @@ body {
 
 .whatsapp-link {
     align-items: center;
-    color: #f8f8f8;
+    color: #000000;
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -758,7 +761,7 @@ footer {
 }
 
 .registration-main {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+/*     background: linear-gradient(135deg, #6a11cb, #2575fc); */
 }
 
 /* Registration Info Section */
@@ -768,7 +771,7 @@ footer {
     justify-content: center;
     padding: 40px 20px;
     /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
-    color: #fff;
+    color: #000000;
     text-align: center;
     /* border-radius: 8px; */
     /* margin: 20px; */
